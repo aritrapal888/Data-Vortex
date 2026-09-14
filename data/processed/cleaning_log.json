@@ -1,0 +1,45 @@
+{
+    "input_files": {
+        "users": "C:\\Users\\Aritra pal\\OneDrive\\Desktop\\DATA VORTEX\\DATA-VORTEX-STARTER\\data\\raw\\Social_Engine_Users.csv",
+        "posts": "C:\\Users\\Aritra pal\\OneDrive\\Desktop\\DATA VORTEX\\DATA-VORTEX-STARTER\\data\\raw\\Social_Engine_Posts_Corrupted.csv"
+    },
+    "output_files": {
+        "users": "C:\\Users\\Aritra pal\\OneDrive\\Desktop\\DATA VORTEX\\DATA-VORTEX-STARTER\\data\\processed\\cleaned_users.csv",
+        "posts": "C:\\Users\\Aritra pal\\OneDrive\\Desktop\\DATA VORTEX\\DATA-VORTEX-STARTER\\data\\processed\\cleaned_posts.csv"
+    },
+    "cleaning_statistics": {
+        "original_rows": 12360,
+        "final_rows": 12000,
+        "exact_duplicates_removed": 360,
+        "negative_likes_converted_to_missing": 509,
+        "platform_missing_originally": 1784,
+        "text_missing_originally": 1688,
+        "likes_missing_originally": 1814,
+        "invalid_timestamps_after_cleaning": 0
+    },
+    "validation": {
+        "users_rows": 1500,
+        "posts_rows": 12000,
+        "duplicate_post_ids": 0,
+        "negative_likes": 0,
+        "negative_shares": 0,
+        "negative_comments": 0,
+        "invalid_timestamps": 0,
+        "missing_platform_after_cleaning": 0,
+        "unknown_user_ids": 0
+    },
+    "decisions": [
+        "Raw datasets were preserved and never overwritten.",
+        "Exact duplicate post records were removed.",
+        "Negative likes were treated as invalid and converted to missing.",
+        "Missing platform values were standardized to 'Unknown'.",
+        "Missing text was retained as missing rather than fabricated.",
+        "HTML entities were decoded.",
+        "HTML tags were removed.",
+        "Control characters were removed.",
+        "Whitespace was normalized.",
+        "NULL-like text values were converted to missing.",
+        "Mixed timestamp formats were converted to a common datetime representation.",
+        "Engagement was calculated only from available numeric values; missing likes were not fabricated."
+    ]
+}

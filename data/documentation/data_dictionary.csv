@@ -1,0 +1,19 @@
+table,column,data_type,description
+users,user_id,string,Unique identifier for each social-engine user
+users,location,string,User's recorded geographic location
+users,language,string,User's recorded language code
+users,account_created,datetime,Date on which the user account was created
+users,follower_count,integer,Number of followers associated with the user
+posts,post_id,string,Unique identifier for each social-media post
+posts,user_id,string,Identifier linking the post to its author in the users table
+posts,platform,string,Social-media platform associated with the post; missing values standardized to Unknown
+posts,text_content,string,Post text after HTML decoding, tag removal, control-character removal, whitespace normalization, and NULL-like value handling
+posts,timestamp,datetime,Post timestamp standardized from multiple source formats
+posts,likes,float,Number of likes; negative source values treated as invalid and converted to missing
+posts,shares,integer,Number of shares associated with the post
+posts,comments,integer,Number of comments associated with the post
+posts,engagement,float,Total available engagement calculated as likes plus shares plus comments
+posts,platform_was_missing,boolean,Indicates whether platform was missing in the recovered source data
+posts,text_was_missing,boolean,Indicates whether text was missing in the recovered source data
+posts,likes_was_missing,boolean,Indicates whether likes was missing in the recovered source data
+posts,likes_was_invalid,boolean,Indicates whether the original likes value was negative and therefore invalid
