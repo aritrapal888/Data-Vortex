@@ -1,38 +1,40 @@
-DATA VORTEX A'26 — FINAL TOPIC MODEL
+DATA VORTEX A'26 — FINAL TOPIC MODEL EVALUATION
 ======================================================================
 
-Model: Linear SVM
-C: 2.0
-Class Weight: balanced
-Word TF-IDF: 1-3 grams, max 100000 features
-Character TF-IDF: 3-6 grams, max 100000 features
-Training samples: 7178
-Testing samples: 1822
+Model: Enhanced Logistic Regression
+Features: Word TF-IDF (1-2 grams) + Character TF-IDF (3-5 grams)
+Word TF-IDF maximum features: 75,000
+Character TF-IDF maximum features: 75,000
+Class weighting: balanced
+C: 1.0
+Solver: lbfgs
+Maximum iterations: 3000
 
-EVALUATION METRICS
+Evaluation Metrics
 ----------------------------------------------------------------------
-Accuracy: 0.9308
-Macro Precision: 0.9260
-Macro Recall: 0.5310
-Macro F1: 0.6160
-Weighted F1: 0.9157
+Accuracy        : 0.9352
+Macro Precision : 0.9292
+Macro Recall    : 0.5630
+Macro F1        : 0.6552
+Weighted F1     : 0.9230
 
-CLASSIFICATION REPORT
+Classification Report
 ----------------------------------------------------------------------
                       precision    recall  f1-score   support
 
-    Account_Security     1.0000    0.3200    0.4848        25
-Community_Discussion     0.9263    1.0000    0.9617      1558
-    Feature_Feedback     0.7778    0.1167    0.2029        60
-    Technical_Issues     1.0000    0.6872    0.8146       179
+    Account_Security       1.00      0.36      0.53        25
+Community_Discussion       0.93      1.00      0.96      1558
+    Feature_Feedback       0.79      0.18      0.30        60
+    Technical_Issues       1.00      0.71      0.83       179
 
-            accuracy                         0.9308      1822
-           macro avg     0.9260    0.5310    0.6160      1822
-        weighted avg     0.9296    0.9308    0.9157      1822
+            accuracy                           0.94      1822
+           macro avg       0.93      0.56      0.66      1822
+        weighted avg       0.93      0.94      0.92      1822
 
-CONFUSION MATRIX
+
+Confusion Matrix
 ----------------------------------------------------------------------
-[[   8   15    2    0]
- [   0 1558    0    0]
- [   0   53    7    0]
- [   0   56    0  123]]
+[[   9   14    2    0]
+ [   0 1557    1    0]
+ [   0   49   11    0]
+ [   0   52    0  127]]
