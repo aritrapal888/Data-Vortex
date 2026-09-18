@@ -1,4 +1,5 @@
 import os
+import joblib
 import pandas as pd
 import numpy as np
 
@@ -50,13 +51,21 @@ REPORT_DIR = os.path.join(
     "reports"
 )
 
+MODEL_DIR = os.path.join(
+    BASE_DIR,
+    "models"
+)
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(REPORT_DIR, exist_ok=True)
+os.makedirs(MODEL_DIR, exist_ok=True)
 
 
 # ================================================================
 # LOAD DATA
 # ================================================================
+
+print("\nLoading train and test data...")
 
 train = pd.read_csv(TRAIN_PATH)
 test = pd.read_csv(TEST_PATH)
@@ -66,6 +75,9 @@ X_test_text = test["post_text"].fillna("")
 
 y_train = train["topic_category"]
 y_test = test["topic_category"]
+
+print(f"Training rows: {len(train)}")
+print(f"Testing rows : {len(test)}")
 
 
 # ================================================================
@@ -89,12 +101,16 @@ X_test_word = word_vectorizer.transform(
     X_test_text
 )
 
+print("Word features:")
+print("Train:", X_train_word.shape)
+print("Test :", X_test_word.shape)
+
 
 # ================================================================
 # CHARACTER TF-IDF
 # ================================================================
 
-print("Creating character TF-IDF...")
+print("\nCreating character TF-IDF...")
 
 char_vectorizer = TfidfVectorizer(
     analyzer="char",
@@ -110,6 +126,10 @@ X_train_char = char_vectorizer.fit_transform(
 X_test_char = char_vectorizer.transform(
     X_test_text
 )
+
+print("Character features:")
+print("Train:", X_train_char.shape)
+print("Test :", X_test_char.shape)
 
 
 # ================================================================
@@ -132,7 +152,7 @@ print("Test :", X_test.shape)
 
 
 # ================================================================
-# FINAL MODEL
+# FINAL TOPIC MODEL
 # ================================================================
 
 print("\nTraining final Topic Enhanced Logistic Regression...")
@@ -152,10 +172,52 @@ model.fit(
 
 
 # ================================================================
+# SAVE COMPLETE TRAINED MODEL PACKAGE
+# ================================================================
+
+print("\nSaving complete trained model package...")
+
+model_package = {
+    "model": model,
+    "word_vectorizer": word_vectorizer,
+    "char_vectorizer": char_vectorizer,
+    "labels": list(model.classes_),
+    "model_name": "Enhanced Logistic Regression",
+    "task": "Topic Classification",
+    "word_ngram_range": (1, 2),
+    "word_max_features": 75000,
+    "char_ngram_range": (3, 5),
+    "char_max_features": 75000,
+    "class_weight": "balanced",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 3000
+}
+
+MODEL_PATH = os.path.join(
+    MODEL_DIR,
+    "final_topic_logistic_regression.pkl"
+)
+
+joblib.dump(
+    model_package,
+    MODEL_PATH,
+    compress=3
+)
+
+print("\nSaved trained model:")
+print(MODEL_PATH)
+
+
+# ================================================================
 # PREDICTION
 # ================================================================
 
-y_pred = model.predict(X_test)
+print("\nGenerating test predictions...")
+
+y_pred = model.predict(
+    X_test
+)
 
 
 # ================================================================
