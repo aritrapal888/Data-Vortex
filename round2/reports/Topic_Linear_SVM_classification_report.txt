@@ -1,0 +1,10 @@
+                      precision    recall  f1-score   support
+
+    Account_Security     1.0000    0.2800    0.4375        25
+Community_Discussion     0.9111    1.0000    0.9535      1558
+    Feature_Feedback     1.0000    0.0333    0.0645        60
+    Technical_Issues     1.0000    0.5754    0.7305       179
+
+            accuracy                         0.9166      1822
+           macro avg     0.9778    0.4722    0.5465      1822
+        weighted avg     0.9240    0.9166    0.8952      1822

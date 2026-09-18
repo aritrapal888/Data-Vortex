@@ -25,3 +25,15 @@ build/
 # Temporary files
 *.tmp
 *.temp
+# Data Vortex Round 2
+round2/models/transformer_sentiment/checkpoint-*/
+
+# Local datasets / generated databases
+round2/data/*.csv
+sql/data_vortex.db
+
+# Large ML checkpoints
+round2/models/transformer_sentiment/checkpoint-*/
+
+# Round 2 trained model files
+round2/models/

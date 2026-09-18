@@ -1,0 +1,38 @@
+DATA VORTEX A'26 — FINAL TOPIC MODEL
+======================================================================
+
+Model: Linear SVM
+C: 2.0
+Class Weight: balanced
+Word TF-IDF: 1-3 grams, max 100000 features
+Character TF-IDF: 3-6 grams, max 100000 features
+Training samples: 7178
+Testing samples: 1822
+
+EVALUATION METRICS
+----------------------------------------------------------------------
+Accuracy: 0.9308
+Macro Precision: 0.9260
+Macro Recall: 0.5310
+Macro F1: 0.6160
+Weighted F1: 0.9157
+
+CLASSIFICATION REPORT
+----------------------------------------------------------------------
+                      precision    recall  f1-score   support
+
+    Account_Security     1.0000    0.3200    0.4848        25
+Community_Discussion     0.9263    1.0000    0.9617      1558
+    Feature_Feedback     0.7778    0.1167    0.2029        60
+    Technical_Issues     1.0000    0.6872    0.8146       179
+
+            accuracy                         0.9308      1822
+           macro avg     0.9260    0.5310    0.6160      1822
+        weighted avg     0.9296    0.9308    0.9157      1822
+
+CONFUSION MATRIX
+----------------------------------------------------------------------
+[[   8   15    2    0]
+ [   0 1558    0    0]
+ [   0   53    7    0]
+ [   0   56    0  123]]

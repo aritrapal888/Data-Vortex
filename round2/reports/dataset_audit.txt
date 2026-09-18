@@ -1,0 +1,51 @@
+DATA VORTEX A'26 — ROUND 2 DATASET AUDIT
+============================================================
+
+Rows: 9000
+Columns: 6
+
+Columns:
+- text_id
+- post_text
+- sentiment_label
+- topic_category
+- text_length_chars
+- text_length_words
+
+Missing Values:
+text_id              0
+post_text            0
+sentiment_label      0
+topic_category       0
+text_length_chars    0
+text_length_words    0
+
+Duplicate Rows:
+0
+Duplicate text_id:
+0
+Duplicate post_text:
+1100
+
+Sentiment Distribution:
+sentiment_label
+Negative    3000
+Positive    3000
+Neutral     3000
+
+Topic Distribution:
+topic_category
+Community_Discussion    7752
+Technical_Issues         815
+Feature_Feedback         297
+Account_Security         136
+
+Text Length Statistics:
+count    9000.000000
+mean      107.985778
+std        26.104963
+min        25.000000
+25%        91.000000
+50%       113.000000
+75%       129.000000
+max       180.000000
