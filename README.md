@@ -4,7 +4,6 @@
 
 ### Rebuilding the Social Engine
 
-> **From raw social-media data to social signals and insights.**
 
 **From Raw Social Data → Machine Learning → NLP → Social Signals**
 
@@ -132,7 +131,7 @@ For Round 3, we moved outside the provided datasets.
 
 ### The Challenge
 
-We independently collected **public YouTube comments** around a platform monetisation change and applied our Round 2 NLP model to the discussion.
+We independently collected **public YouTube comments** discussing a platform monetisation change and applied our Round 2 NLP model to the discussion.
 
 We used the **YouTube Data API v3** for data collection.
 
@@ -303,6 +302,6 @@ The biggest lesson wasn't simply how to train another model — it was learning 
 
 **Rebuilding the Social Engine.**
 
-*No trophy this time. But definitely a lot of progress. *
+**No trophy this time. But definitely a lot of progress**
 
 </div>
