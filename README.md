@@ -5,41 +5,34 @@
 ### Rebuilding the Social Engine
 
 > **From raw social-media data to social signals and insights.**
+
 **From Raw Social Data → Machine Learning → NLP → Social Signals**
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![SQL](https://img.shields.io/badge/SQL-SQLite-blue?logo=sqlite)
-![Python](https://img.shields.io/badge/Python-3.x-blue)
-![SQL](https://img.shields.io/badge/SQL-SQLite-blue)
 ![NLP](https://img.shields.io/badge/NLP-DistilBERT-orange)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange)
-![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-green)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-green)
 
----
-### Team `soumadipd43`
+### 👥 Team `soumadipd43`
 
-## 👥 Team
 **Soumadip Das** · IT · Team Head &nbsp; | &nbsp; **Aritra Pal** · CSE — AI & ML
 
-**Team soumadipd43** · Haldia Institute Of Technology
 **Haldia Institute Of Technology**
 
-**Soumadip Das** — Team Head  
-**Aritra Pal** — CSE, AI & ML
 </div>
 
 ---
 
 ## 🚀 About the Project
 
-**Data Vortex A'26** was a multi-round data science and AI challenge by **Aaruush** built around the theme **"Rebuilding the Social Engine."**
+**Data Vortex A'26** was a multi-round data science and AI challenge by **Aaruush**, built around the theme **"Rebuilding the Social Engine."**
 
 Across three rounds, we moved from structured social-media data and SQL analysis to machine learning, NLP, and finally independently collected public social-media data.
-Across three rounds, we moved from structured social-media data and SQL analysis to NLP modelling and finally to independently collected public social-media data.
 
 ### Our Journey
 
 **📊 Data & SQL → 🤖 Machine Learning & NLP → 🌐 Real-World Social Signals**
+
 | Round | Focus | What We Built |
 |:---:|---|---|
 | **01** | 📊 Data + SQL | Engagement, location & user-behaviour analysis |
@@ -53,92 +46,97 @@ Across three rounds, we moved from structured social-media data and SQL analysis
 ### The Challenge
 
 We analysed structured social-media data using **SQL and Python** to uncover engagement patterns and unusual user behaviour.
-Analyse structured social-media data and uncover engagement patterns using SQL.
 
-### What we analysed
 ### What We Analysed
 
 - **Platform Engagement** — average likes, shares, comments and total engagement
-- **Location Engagement** — locations generating the highest engagement
+- **Location Engagement** — locations generating higher engagement
 - **High-Impact Users** — users showing unusually high engagement relative to follower count
-- **E3** — Platform engagement
-- **M1** — Location-based engagement
-- **H6** — Suspicious high-impact users
 
-**Tech:** `Python` `Pandas` `SQLite` `SQL`
+### Key Analyses
+
+| Analysis | Focus |
+|---|---|
+| **E3** | Platform engagement |
+| **M1** | Location-based engagement |
+| **H6** | High-impact user behaviour |
+
 ### Platform Engagement
 
-![Platform Engagement](sql/outputs/E3_output.jpeg)
+![Platform Engagement](platform_engagement.jpeg)
 
-**Stack:** `Python` `Pandas` `SQLite` `SQL`
+**Tech:** `Python` `Pandas` `SQLite` `SQL`
 
 ---
 
 # 🤖 Round 2 — NLP & Machine Learning
 
 Round 2 moved from analysing numbers to understanding **what people were actually saying**.
+
 ### The Challenge
 
 We built NLP pipelines for:
-Build NLP models capable of understanding the **sentiment and topic** of social-media posts.
 
-- Sentiment Classification
-- Topic Classification
-- Text Preprocessing
-- Feature Engineering
-- Model Evaluation
-- Error Analysis
-We experimented with:
+- Sentiment classification
+- Topic classification
+- Text preprocessing
+- Feature engineering
+- Model evaluation
+- Error analysis
 
-### Sentiment Model
-`Logistic Regression` · `SVM` · `Naive Bayes` · `TF-IDF` · `DistilBERT`
+### Models Explored
 
-After experimenting with Logistic Regression, SVM, Naive Bayes and TF-IDF approaches, we trained a **DistilBERT** sentiment classifier.
+`Logistic Regression` · `Linear SVM` · `Naive Bayes` · `TF-IDF` · `DistilBERT`
+
+---
+
+## 💬 Sentiment Classification
+
+After experimenting with multiple approaches, we trained a **DistilBERT-based sentiment classifier**.
+
 ### Results
 
 | Metric | Result |
-| :--- | ---: |
+|---|---:|
 | Accuracy | **68.33%** |
 | Macro F1 | **67.81%** |
 | Weighted F1 | **67.77%** |
-| Task | Model | Accuracy | Macro F1 |
-|---|---|---:|---:|
-| Sentiment | DistilBERT | **68.33%** | **67.81%** |
-| Topic | TF-IDF + Logistic Regression | **93.52%** | **65.52%** |
 
 **Classes:** `Negative` · `Neutral` · `Positive`
-### Sentiment Classes
 
-### Topic Model
-`Negative` · `Neutral` · `Positive`
-
-Our final topic classifier combined **word + character TF-IDF** features with Logistic Regression.
 ### Model Evaluation
 
+![Sentiment Confusion Matrix](sentiment_confusion_matrix.png)
+
+---
+
+## 🏷️ Topic Classification
+
+Our final topic classifier combined **word + character TF-IDF** features with Logistic Regression.
+
+### Results
+
 | Metric | Result |
-| :--- | ---: |
+|---|---:|
 | Accuracy | **93.52%** |
+| Macro Precision | **92.92%** |
+| Macro Recall | **56.30%** |
 | Macro F1 | **65.52%** |
 | Weighted F1 | **92.30%** |
-![Sentiment Confusion Matrix](round2/outputs/transformer_sentiment/confusion_matrix.png)
 
 ---
 
 # 🌐 Round 3 — Real-World Social Signals
 
 For Round 3, we moved outside the provided datasets.
+
 ### The Challenge
 
 We independently collected **public YouTube comments** around a platform monetisation change and applied our Round 2 NLP model to the discussion.
-Take our NLP pipeline beyond a prepared dataset and apply it to **independently collected public social-media data**.
 
-We collected public YouTube comments around a platform monetisation change using the **YouTube Data API v3**.
+We used the **YouTube Data API v3** for data collection.
 
-### Pipeline
-
-**YouTube API → Collection → Filtering → NLP → Time Analysis → Social Signals**
-
-We analysed:
+### What We Analysed
 
 - 💬 Sentiment
 - 📈 Sentiment shifts over time
@@ -147,65 +145,91 @@ We analysed:
 - 🔎 Entities
 - ⚡ Possible discussion triggers
 
-### Final Dataset
+### Pipeline
+
+**YouTube API → Collection → Filtering → NLP → Time Analysis → Social Signals**
+
+---
+
+## 📊 Final Dataset
 
 | Metric | Result |
-| :--- | ---: |
+|---|---:|
 | Comments | **40** |
 | Videos | **12** |
 | Duplicate Comments | **0** |
-| Negative | **7** |
-| Neutral | **26** |
-| Positive | **7** |
+| Sentiment Classes | **3** |
 | Engagement Spikes | **2** |
 
-**Analysis period:** 5 August 2026 – 10 September 2026
-| Comments | Videos | Duplicates | Engagement Spikes |
-|:---:|:---:|:---:|:---:|
-| **40** | **12** | **0** | **2** |
+**Analysis period:** `5 August 2026 → 10 September 2026`
 
 ---
+
+## 📈 Sentiment Analysis
+
+The Round 2 DistilBERT model was applied to the collected comments to analyse sentiment over time.
+
 ### Sentiment Distribution
 
-## 🔥 Engagement Analysis
-| Negative | Neutral | Positive |
-|:---:|:---:|:---:|
-| 🔴 **7** | ⚪ **26** | 🟢 **7** |
+| Sentiment | Count |
+|---|---:|
+| 🔴 Negative | **7** |
+| ⚪ Neutral | **26** |
+| 🟢 Positive | **7** |
 
-Comment engagement was calculated as:
 ### Sentiment Over Time
 
+![Sentiment Timeline](sentiment_timeline.png)
+
+---
+
+## 🔥 Engagement Analysis
+
+Comment engagement was calculated as:
+
 **Engagement = Likes + Replies**
-![Sentiment Timeline](round4/outputs/round3_sentiment_timeline.png)
 
 | Metric | Value |
-| :--- | ---: |
+|---|---:|
 | Mean Engagement | **2.35** |
 | Median Engagement | **1.50** |
 | Spike Threshold | **8.32** |
 | Highest Engagement | **15** |
 | Second Highest | **10** |
+
 ### Engagement Spikes
 
 Two comments crossed the engagement-spike threshold.
-![Engagement Spikes](round4/outputs/round3_engagement_spikes.png)
+
+![Engagement Spikes](engagement_spikes.png)
 
 ---
 
 ## 🏷️ Discussion Topics
-## 🏷️ What People Were Discussing
 
 | Topic | Share |
-| :--- | ---: |
 |---|---:|
 | Eligibility & Access | **27.5%** |
 | Original Content & Reposts | **25.0%** |
 | Monetisation Rules | **15.0%** |
-@@ -151,24 +133,47 @@ Two comments crossed the engagement-spike threshold.
+| Payouts & Earnings | **12.5%** |
+| Impressions & Reach | **12.5%** |
+| Small Creators | **10.0%** |
 
-## 🛠️ Tech Stack
+### Entities
 
-`Python` · `SQL` · `Pandas` · `NumPy` · `SQLite` · `Scikit-learn` · `TF-IDF` · `DistilBERT` · `Hugging Face Transformers` · `YouTube Data API` · `Git` · `GitHub`
+| Entity | Share |
+|---|---:|
+| X / Twitter | **25.0%** |
+| Pakistan | **15.0%** |
+| 500K Impressions | **7.5%** |
+| Original Content Rewards | **5.0%** |
+| Elon Musk | **2.5%** |
+
+---
+
+# 🛠️ Technology Stack
+
 <div align="center">
 
 **Python · SQL · Pandas · NumPy · SQLite · Scikit-learn · TF-IDF · DistilBERT · Hugging Face · YouTube Data API · Git · GitHub**
@@ -214,25 +238,38 @@ Two comments crossed the engagement-spike threshold.
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```text
 Data-Vortex/
+│
 ├── sql/                  # Round 1 SQL analysis
+│   └── outputs/
+│
 ├── round2/               # NLP & ML pipeline
+│   ├── data/
 │   ├── models/
+│   ├── notebooks/
 │   ├── outputs/
 │   └── reports/
+│
 ├── round3/               # Real-world social analysis
+│   ├── data/
 │   ├── scripts/
 │   ├── notebooks/
 │   ├── outputs/
 │   └── reports/
+│
 ├── round4/               # Round 4 preparation
+│   ├── data/
+│   ├── dashboard/
+│   ├── outputs/
+│   └── reports/
+│
 ├── .env.example
+├── .gitignore
 └── README.md
 ```
-
 ## 💡 What We Learned
 
 > **Real-world data rarely behaves like a clean benchmark dataset.**
@@ -264,7 +301,7 @@ The biggest lesson wasn't simply how to train another model — it was learning 
 
 ### 🌐 Data Vortex A'26
 
-**Rebuilding the Social Engine**
+**Rebuilding the Social Engine.**
 
 *No trophy this time. But definitely a lot of progress. *
 
