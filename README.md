@@ -9,68 +9,48 @@ Data Vortex A'26 was a multi-round data and AI challenge built around the theme 
 
 Our work progressed from structured social-media analysis and SQL to NLP, sentiment classification, and independent collection of public social-media data for real-world analysis.
 
-# Data Vortex A'26 — Rebuilding the Social Engine
+# 🌐 Data Vortex A'26 — Rebuilding the Social Engine
 
-> From raw social-media data to patterns, signals, and insights.
+> From raw social-media data to meaningful patterns, signals, and insights.
 
-**Data Vortex A'26** was a multi-round data science and AI challenge by **Aaruush**, built around the theme **"Rebuilding the Social Engine."**
+**Data Vortex A'26** was a multi-round data science and AI challenge by **Aaruush**, where we explored how a "Social Engine" could understand not only what people say, but how conversations evolve over time.
 
-Our journey moved through three stages:
+### 👥 Team `soumadipd43`
 
-**Data & SQL → Machine Learning & NLP → Real-World Social Signals**
+**Soumadip Das** · Team Head  
+**Aritra Pal** · CSE — AI & ML
 
----
-
-## 👥 Team
-
-| Member | Role |
-|---|---|
-| **Aritra Pal** | CSE — AI & ML |
-| **Soumadip Das** | Team Head |
-
-**Team Name:** `soumadipd43`  
-**Institute:** Haldia Institute Of Technology
+**Haldia Institute Of Technology**
 
 ---
 
-# 🧠 What We Built
+## 🚀 Our Journey
 
-The challenge evolved across multiple layers of a social-data pipeline.
+The project evolved through three different layers of social-media analysis:
 
 ```text
-                 SOCIAL ENGINE
-                       │
-                       ▼
-              ┌─────────────────┐
-              │   Raw Data      │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │ Cleaning & EDA  │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │   SQL Analysis  │
-              └────────┬────────┘
-                       │
-                       ▼
-              ┌─────────────────┐
-              │   ML + NLP      │
-              └────────┬────────┘
-                       │
-             ┌─────────┴─────────┐
-             ▼                   ▼
-       Sentiment             Topics
-             │                   │
-             └─────────┬─────────┘
-                       ▼
-              ┌─────────────────┐
-              │ Social Signals  │
-              └────────┬────────┘
-                       │
-          ┌────────────┼────────────┐
-          ▼            ▼            ▼
-      Sentiment    Engagement    Entities
-       Shifts        Spikes       & Topics
+        RAW SOCIAL DATA
+              │
+              ▼
+       ┌──────────────┐
+       │ Round 1      │
+       │ Data + SQL   │
+       └──────┬───────┘
+              │
+              ▼
+       ┌──────────────┐
+       │ Round 2      │
+       │ ML + NLP     │
+       └──────┬───────┘
+              │
+              ▼
+       ┌──────────────┐
+       │ Round 3      │
+       │ Social       │
+       │ Signals      │
+       └──────┬───────┘
+              │
+              ▼
+       ┌──────────────┐
+       │   INSIGHTS   │
+       └──────────────┘
